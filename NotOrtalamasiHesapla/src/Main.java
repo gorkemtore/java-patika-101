@@ -28,6 +28,9 @@ public class Main {
 			System.out.println(controlPass+ "\nNot ortalaması = "+ average);
 			
 		}
+		catch (Exception e) {
+			System.out.println("Girilen sayı aralık dışı ");
+		}
 	}
 
 }
