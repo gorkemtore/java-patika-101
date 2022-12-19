@@ -14,10 +14,9 @@ public class Main {
 		
 		for (int i=0 ; i<12 ; i++) {
 			if (kalan==i) {
-				System.out.println("Burcunuz : "+burclar[i]);
+				System.out.print("Burcunuz : "+burclar[i]);
 			}
 		}
-		System.out.println(2002%12);
 		
 
 	}
