@@ -110,7 +110,24 @@ public class Main{
 	}
 	
 	static void mod() {
+		Scanner s = new Scanner(System.in);
+		print("Modu alınacak  sayı : ");
+		double sayi = s.nextDouble();
+		print("Girdiğiniz sayının hangi sayı ile modu alınsınz : ");
+		double mod = s.nextDouble();
 		
+		print("Sonuç : "+(sayi % mod)+"\n");
+	}
+	
+	static void dikdortgenAlanCevre() {
+		Scanner s = new Scanner(System.in);
+		print("Uzun kenarı girin: ");
+		int uzun = s.nextInt();
+		print("Kısa kenarı girin: ");
+		int kisa = s.nextInt();
+		int alan = kisa*uzun;
+		int cevre = 2*(kisa+uzun);
+		print("Cevre: "+cevre+"\nAlan: "+alan+"\n");
 	}
 	
 	public static void main(String[] args) {
@@ -150,6 +167,12 @@ public class Main{
 	                case 6:
 	                    faktoriyel();
 	                    break;
+	                case 7:
+	                	mod();
+	                	break;
+	                case 8:
+	                	dikdortgenAlanCevre();
+	                	break;
 	                case 0:
 	                    break;
 	                default:
