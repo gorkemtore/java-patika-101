@@ -18,13 +18,15 @@ public class Main {
 		for(int i = 1; i<=us;i++) {
 			sonuc*=taban;
 		}
-		print("Sonuç : "+sonuc+"\n");
+		print("Sonuç : "+sonuc+"\n\n");
+		
+		usBul();
 	}
 	
 	
 	public static void main(String[] args) {
 		usBul();
-		usBul();
+		
 
 	}
 
