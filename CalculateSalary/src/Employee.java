@@ -2,14 +2,14 @@ public class Employee {
 	String name;
 	double salary;
 	int workHours;
-	int hireYear;
+	int startYear;
 	
 	Employee(String name, double salary, int workHours, int hireYear){
 		
 		this.name = name;
 		this.salary = salary;
 		this.workHours = workHours;
-		this.hireYear = hireYear;
+		this.startYear = hireYear;
 		
 	}
 	
@@ -35,15 +35,15 @@ public class Employee {
 	
 	double raiseSalary() {
 		int currentYear =2022;
-		if (currentYear- this.hireYear < 10) {
+		if (currentYear- this.startYear < 10) {
 			
 			return this.salary*0.05;
 
-		}else if(currentYear - this.hireYear >= 10 && currentYear - this.hireYear<20) {
+		}else if(currentYear - this.startYear >= 10 && currentYear - this.startYear<20) {
 			
 			return this.salary*0.10;		
 			
-		}else if(currentYear - this.hireYear >=20) {
+		}else if(currentYear - this.startYear >=20) {
 			
 			return this.salary*0.15;	
 			
@@ -55,16 +55,16 @@ public class Employee {
 	
 	void printInfo() {
 		//print what is known about employee
-		System.out.println("Adı : "+this.name);
-		System.out.println("Maaşı : "+this.salary);
-		System.out.println("Çalışma Saati : "+this.workHours);
-		System.out.println("Başlangıç Yılı : "+this.hireYear);
-		System.out.println("Vergi : "+this.tax());
+		System.out.println("Employee name : "+this.name);
+		System.out.println("Salary : "+this.salary);
+		System.out.println("Work Hours : "+this.workHours);
+		System.out.println("Start Year : "+this.startYear);
+		System.out.println("Tax : "+this.tax());
 		System.out.println("Bonus : "+this.bonus());
-		System.out.println("Maaş artışı : "+this.raiseSalary());
+		System.out.println("Salary Increase : "+this.raiseSalary());
 		double totalSalary = this.salary + this.bonus() + this.raiseSalary() - this.tax();
-		System.out.println("Vergi ve Bonuslar ile birlikte maaş : "+(this.salary + this.bonus()-this.tax()));
-		System.out.println("Toplam maaş : "+totalSalary);
+		System.out.println("Salary with Taxes and Bonuses : "+(this.salary + this.bonus()-this.tax()));
+		System.out.println("Total Salary : "+totalSalary);
 
 	}
 	
