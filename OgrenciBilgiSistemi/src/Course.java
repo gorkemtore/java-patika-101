@@ -13,8 +13,8 @@ public class Course {
 		this.dersAdi = dersAdi;
 		this.kod = kod;
 		this.dersKisaltmasi = dersKisaltmasi;
-		int not = 0;
-		int sozlu=0;
+		/*int not = 0;
+		int sozlu=0;*/
 	}
 	
 	void addTeacher(Teacher teacher) {
