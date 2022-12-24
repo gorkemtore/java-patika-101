@@ -3,10 +3,19 @@ import java.util.Arrays;
 
 public class Main {
 
-	
+	static boolean isThere(int[] arr, int sayi) {
+		for (int i : arr) {
+			
+			if(i == sayi) {
+				return true;
+			}
+		
+		}
+		return false;
+	}
 	
 	public static void main(String[] args) {
-		int[] sayilar = {3,5,4,2,7,4,11,18,20,84,14,18,8,97,14,17,11,17};
+		int[] sayilar = {3,5,4,2,7,4,11,18,20,84,14,18,8,97,14,17,11,17,4};
 		int [] birTaneOlanlar = new int[sayilar.length];
 		int indis = 0;
 		for (int i = 0; i < sayilar.length; i++) {
@@ -14,7 +23,10 @@ public class Main {
 				if(sayilar[i] % 2 == 0) {
 					if(sayilar[i] == sayilar[j] && i !=j) {
 						
-						birTaneOlanlar[indis++]=sayilar[j];
+						if(!(isThere(birTaneOlanlar, sayilar[i]))) {
+							birTaneOlanlar[indis++]=sayilar[i];
+							
+						}
 						
 					}
 				}
@@ -22,14 +34,11 @@ public class Main {
 			}
 		}
 		Arrays.sort(birTaneOlanlar);
-		
-		
-		for (int i = 0; i < birTaneOlanlar.length; i+=2) {
-			if(birTaneOlanlar[i]!=0) {
-				
-				System.out.print(birTaneOlanlar[i]+" ");
-				
+		for (int i : birTaneOlanlar) {
+			if(i!=0) {
+				System.out.print(i+" ");
 			}
+			
 		}
 		
 		
