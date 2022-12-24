@@ -26,7 +26,7 @@ public class Main {
 			System.out.print((i+1)+". Elaman : ");
 			sayilar[i] = s.nextInt();
 		}
-		
+		s.close();
 		int enKucuk=2147483647;
 		
 		for (int j = 0; j < sayilar.length; j++) {
